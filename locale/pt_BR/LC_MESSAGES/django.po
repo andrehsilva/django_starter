@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-29 19:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: a_core/settings.py:144
+msgid "Português"
+msgstr "Português"
+
+#: a_core/settings.py:145
+msgid "Inglês"
+msgstr "Inglês"
+
+#: a_core/settings.py:146
+msgid "Espanhol"
+msgstr "Espanhol"
+
+#: a_users/templates/a_users/profile_edit.html:7
+msgid "Complete your Profile"
+msgstr "Complete seu Perfil"
+
+#: a_users/templates/a_users/profile_edit.html:9
+msgid "Edit your Profile"
+msgstr "Edite seu Perfil"
+
+#: a_users/templates/a_users/profile_edit.html:22
+msgid "Submit"
+msgstr "Enviar"
+
+#: a_users/templates/a_users/profile_edit.html:24
+msgid "Skip"
+msgstr "Pular"
+
+#: a_users/templates/a_users/profile_edit.html:26
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: a_users/templates/a_users/profile_settings.html:6
+msgid "Account Settings"
+msgstr "Configurações da Conta"
+
+#: a_users/templates/a_users/profile_settings.html:12
+msgid "Email address"
+msgstr "Endereço de e-mail"
+
+#: a_users/templates/a_users/profile_settings.html:15
+msgid "No Email"
+msgstr "Sem e-mail"
+
+#: a_users/templates/a_users/profile_settings.html:22
+#: a_users/templates/a_users/profile_settings.html:55
+msgid "Edit"
+msgstr "Editar"
+
+#: a_users/templates/a_users/profile_settings.html:32
+msgid "Verified"
+msgstr "Verificado"
+
+#: a_users/templates/a_users/profile_settings.html:33
+msgid "Not verified"
+msgstr "Não verificado"
+
+#: a_users/templates/a_users/profile_settings.html:38
+msgid "Verify"
+msgstr "Verificar"
+
+#: a_users/templates/a_users/profile_settings.html:45
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: a_users/templates/a_users/profile_settings.html:62
+msgid "Delete Account"
+msgstr "Deletar Conta"
+
+#: a_users/templates/a_users/profile_settings.html:65
+msgid "Once deleted, account is gone. Forever."
+msgstr "Uma vez deletada, a conta desaparecerá. Para sempre."
+
+#: a_users/templates/a_users/profile_settings.html:69
+msgid "Delete"
+msgstr "Deletar"
+
+#: templates/404.html:7
+msgid "Page not found"
+msgstr "Página não encontrada"
+
+#: templates/404.html:9
+msgid "Error 404: This page doesn't exist or is unavailable"
+msgstr "Erro 404: Esta página não existe ou está indisponível"
+
+#: templates/account/login.html:5 templates/account/login.html:10
+#: templates/includes/header.html:54
+msgid "Login"
+msgstr "Login"
+
+#: templates/account/login.html:24
+#, python-format
+msgid ""
+"If you have not created an account yet, then please %(link)ssign up</a> "
+"first."
+msgstr ""
+"Se você ainda não criou uma conta, por favor, %(link)scadastre-se</a> "
+"primeiro."
+
+#: templates/account/login.html:41
+msgid "Sign In"
+msgstr "Entrar"
+
+#: templates/account/signup.html:4 templates/includes/header.html:55
+msgid "Signup"
+msgstr "Cadastro"
+
+#: templates/account/signup.html:8 templates/account/signup.html:28
+msgid "Sign Up"
+msgstr "Cadastre-se"
+
+#: templates/account/signup.html:13
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+"Já possui uma conta? Então, por favor, <a href=\"%(login_url)s\">faça o "
+"login</a>."
+
+#: templates/account/signup.html:37
+msgid "Sign up using a passkey"
+msgstr "Cadastre-se usando uma passkey"
+
+#: templates/includes/header.html:32
+msgid "Home"
+msgstr "Início"
+
+#: templates/includes/header.html:45
+msgid "My Profile"
+msgstr "Meu Perfil"
+
+#: templates/includes/header.html:46
+msgid "Edit Profile"
+msgstr "Editar Perfil"
+
+#: templates/includes/header.html:47
+msgid "Settings"
+msgstr "Configurações"
+
+#: templates/includes/header.html:48
+msgid "Log Out"
+msgstr "Sair"

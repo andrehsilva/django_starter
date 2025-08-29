@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-29 19:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: a_core/settings.py:144
+msgid "Português"
+msgstr "Portugués"
+
+#: a_core/settings.py:145
+msgid "Inglês"
+msgstr "Inglés"
+
+#: a_core/settings.py:146
+msgid "Espanhol"
+msgstr "Español"
+
+#: a_users/templates/a_users/profile_edit.html:7
+msgid "Complete your Profile"
+msgstr "Completa tu perfil"
+
+#: a_users/templates/a_users/profile_edit.html:9
+msgid "Edit your Profile"
+msgstr "Edita tu perfil"
+
+#: a_users/templates/a_users/profile_edit.html:22
+msgid "Submit"
+msgstr "Enviar"
+
+#: a_users/templates/a_users/profile_edit.html:24
+msgid "Skip"
+msgstr "Omitir"
+
+#: a_users/templates/a_users/profile_edit.html:26
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: a_users/templates/a_users/profile_settings.html:6
+msgid "Account Settings"
+msgstr "Configuración de la cuenta"
+
+#: a_users/templates/a_users/profile_settings.html:12
+msgid "Email address"
+msgstr "Dirección de correo electrónico"
+
+#: a_users/templates/a_users/profile_settings.html:15
+msgid "No Email"
+msgstr "Sin correo electrónico"
+
+#: a_users/templates/a_users/profile_settings.html:22
+#: a_users/templates/a_users/profile_settings.html:55
+msgid "Edit"
+msgstr "Editar"
+
+#: a_users/templates/a_users/profile_settings.html:32
+msgid "Verified"
+msgstr "Verificado"
+
+#: a_users/templates/a_users/profile_settings.html:33
+msgid "Not verified"
+msgstr "No verificado"
+
+#: a_users/templates/a_users/profile_settings.html:38
+msgid "Verify"
+msgstr "Verificar"
+
+#: a_users/templates/a_users/profile_settings.html:45
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: a_users/templates/a_users/profile_settings.html:62
+msgid "Delete Account"
+msgstr "Eliminar cuenta"
+
+#: a_users/templates/a_users/profile_settings.html:65
+msgid "Once deleted, account is gone. Forever."
+msgstr "Una vez eliminada, la cuenta desaparecerá. Para siempre."
+
+#: a_users/templates/a_users/profile_settings.html:69
+msgid "Delete"
+msgstr "Eliminar"
+
+#: templates/404.html:7
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: templates/404.html:9
+msgid "Error 404: This page doesn't exist or is unavailable"
+msgstr "Error 404: Esta página no existe o no está disponible"
+
+#: templates/account/login.html:5 templates/account/login.html:10
+#: templates/includes/header.html:54
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: templates/account/login.html:24
+#, python-format
+msgid ""
+"If you have not created an account yet, then please %(link)ssign up</a> "
+"first."
+msgstr ""
+"Si aún no has creado una cuenta, por favor, %(link)sregístrate</a> primero."
+
+#: templates/account/login.html:41
+msgid "Sign In"
+msgstr "Acceder"
+
+#: templates/account/signup.html:4 templates/includes/header.html:55
+msgid "Signup"
+msgstr "Registro"
+
+#: templates/account/signup.html:8 templates/account/signup.html:28
+msgid "Sign Up"
+msgstr "Registrarse"
+
+#: templates/account/signup.html:13
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+"¿Ya tienes una cuenta? Entonces, por favor, <a href=\"%(login_url)s\">inicia "
+"sesión</a>."
+
+#: templates/account/signup.html:37
+msgid "Sign up using a passkey"
+msgstr "Registrarse usando una passkey"
+
+#: templates/includes/header.html:32
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/includes/header.html:45
+msgid "My Profile"
+msgstr "Mi perfil"
+
+#: templates/includes/header.html:46
+msgid "Edit Profile"
+msgstr "Editar perfil"
+
+#: templates/includes/header.html:47
+msgid "Settings"
+msgstr "Configuración"
+
+#: templates/includes/header.html:48
+msgid "Log Out"
+msgstr "Cerrar sesión"

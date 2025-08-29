@@ -1,0 +1,59 @@
+{% load static %}
+{% load i18n %}
+{% load i18n_tags %}
+
+<header class="flex items-center justify-between bg-gray-800 h-20 px-8 text-white sticky top-0 z-40">
+    <div>
+        <a class="flex items-center gap-2" href="/">
+            <img class="h-6" src="{% static 'images/logo.svg' %}" alt="Logo"/>
+            <span class="text-lg font-bold">{{ PROJECT_TITLE }}</span>
+        </a>
+    </div>
+    <nav class="block relative">
+        <ul class="navitems flex items-center justify-center h-full gap-4">
+            
+            <li>
+                <form action="{% url 'set_language' %}" method="post" class="inline-block">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{% url_without_lang %}">
+                    <select name="language" onchange="this.form.submit()" class="bg-gray-700 text-white border-gray-600 rounded-md shadow-sm py-1 pl-2 pr-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white cursor-pointer appearance-none" style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-position: right .5rem center; background-repeat: no-repeat; background-size: .65em auto;">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang_code, lang_name in LANGUAGES %}
+                            <option class="bg-gray-700 text-white" value="{{ lang_code }}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+                                {{ lang_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </li>
+
+            {% if request.user.is_authenticated %}
+            <li><a href="/">{% trans "Home" %}</a></li>
+            <li x-data="{ dropdownOpen: false }" class="relative">
+                <a @click="dropdownOpen = !dropdownOpen" @click.away="dropdownOpen = false" class="cursor-pointer select-none">
+                    <img class="h-8 w-8 rounded-full object-cover" src="{{ request.user.profile.avatar }}" alt="Avatar" />
+                    {{ request.user.profile.name }}
+                    <img x-bind:class="dropdownOpen && 'rotate-180 duration-300'" class="w-4" src="https://img.icons8.com/small/32/ffffff/expand-arrow.png" alt="Dropdown" />
+                </a>
+                <div x-show="dropdownOpen" x-cloak class="absolute right-0 bg-white text-black shadow rounded-lg w-40 p-2 z-20"
+                x-transition:enter="duration-300 ease-out"
+                x-transition:enter-start="opacity-0 -translate-y-5 scale-90"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                >
+                    <ul class="hoverlist [&>li>a]:justify-end">
+                        <li><a href="{% url 'profile' %}">{% trans "My Profile" %}</a></li>
+                        <li><a href="{% url 'profile-edit' %}">{% trans "Edit Profile" %}</a></li>
+                        <li><a href="{% url 'profile-settings' %}">{% trans "Settings" %}</a></li>
+                        <li><a href="{% url 'account_logout' %}">{% trans "Log Out" %}</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+            {% else %}
+            <li><a href="{% url 'account_login' %}">{% trans "Login" %}</a></li>
+            <li><a href="{% url 'account_signup' %}?next={% url 'profile-onboarding' %}">{% trans "Signup" %}</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

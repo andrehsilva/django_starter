@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeta Imaginário Jundiaí - Onde a Aventura Começa!</title>
+    <meta name="description" content="O espaço perfeito para festas inesquecíveis, brincadeiras criativas e momentos mágicos para seu filho em Jundiaí.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF8C00',
+                        secondary: '#FFD700',
+                        accent: '#40E0D0',
+                        peach: '#FFA07A',
+                        dark: '#333333',
+                        light: '#F8F8F8',
+                    },
+                    fontFamily: {
+                        nunito: ['Nunito', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style type="text/css">
+        .hero-pattern {
+            background: linear-gradient(rgba(255, 140, 0, 0.85), rgba(255, 160, 122, 0.85)), url('https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=1200') no-repeat center center/cover;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .attraction-card {
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        
+        .attraction-card img {
+            transition: transform 0.7s ease;
+        }
+        
+        .attraction-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .navbar-scroll {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-nunito text-dark bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-500" id="navbar">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">PI</div>
+                    <span class="font-bold text-xl text-primary">Planeta<br>Imaginário</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10">
+                    <a href="#inicio" class="text-dark hover:text-primary font-semibold transition-colors">Início</a>
+                    <a href="#festas" class="text-dark hover:text-primary font-semibold transition-colors">Festas</a>
+                    <a href="#atividades" class="text-dark hover:text-primary font-semibold transition-colors">Atividades</a>
+                    <a href="#sobre" class="text-dark hover:text-primary font-semibold transition-colors">Sobre Nós</a>
+                    <a href="#galeria" class="text-dark hover:text-primary font-semibold transition-colors">Galeria</a>
+                    <a href="#contato" class="text-dark hover:text-primary font-semibold transition-colors">Contato</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex space-x-3">
+                        <a href="#" class="text-dark hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-dark hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dark hover:text-primary transition-colors"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    
+                    <button class="lg:hidden text-dark focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden bg-white shadow-lg py-4" id="mobile-menu">
+            <div class="container mx-auto px-4 flex flex-col space-y-3">
+                <a href="#inicio" class="py-2 font-semibold">Início</a>
+                <a href="#festas" class="py-2 font-semibold">Festas</a>
+                <a href="#atividades" class="py-2 font-semibold">Atividades</a>
+                <a href="#sobre" class="py-2 font-semibold">Sobre Nós</a>
+                <a href="#galeria" class="py-2 font-semibold">Galeria</a>
+                <a href="#contato" class="py-2 font-semibold">Contato</a>
+                <div class="flex space-x-4 py-2">
+                    <a href="#" class="text-dark hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-dark hover:text-primary"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-dark hover:text-primary"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-pattern min-h-screen flex items-center pt-20 pb-10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center text-white">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 animate-float">Bem-vindos ao <span class="text-secondary">Planeta Imaginário</span></h1>
+                <p class="text-xl md:text-2xl mb-8">O espaço perfeito para festas inesquecíveis, brincadeiras criativas e momentos mágicos para seu filho.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#festas" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition-all transform hover:-translate-y-1">Agende sua Festa!</a>
+                    <a href="#atividades" class="bg-transparent hover:bg-white border-2 border-white text-white hover:text-primary font-bold py-3 px-8 rounded-full transition-all">Conheça Nossas Atividades!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-16">Por que escolher o <span class="text-primary">Planeta Imaginário</span>?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 rounded-xl bg-light transition-all hover:shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Segurança Total</h3>
+                    <p class="text-gray-600">Ambiente 100% seguro e monitorado para a tranquilidade dos pais.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6 rounded-xl bg-light transition-all hover:shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-secondary rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                        <i class="fas fa-laugh-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diversão Garantida</h3>
+                    <p class="text-gray-600">Brincadeiras que estimulam a criatividade e a alegria contagiante.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6 rounded-xl bg-light transition-all hover:shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-accent rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Equipe Especializada</h3>
+                    <p class="text-gray-600">Cuidadores dedicados e apaixonados pelo universo infantil.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="text-center p-6 rounded-xl bg-light transition-all hover:shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-peach rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Estrutura Completa</h3>
+                    <p class="text-gray-600">Espaços temáticos e brinquedos incríveis para todas as idades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="atividades" class="py-16 bg-gradient-to-b from-white to-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-4">Nossas <span class="text-primary">Atrações</span></h2>
+            <p class="text-xl text-center text-gray-600 mb-16">Descubra um mundo de diversão e imaginação</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Attraction 1 -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550355191-aa7583f09f1a?w=800" alt="Super Brinquedão" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-bold text-primary mb-3">O Super Brinquedão!</h3>
+                        <p class="text-gray-600 mb-4">Labirintos, escorregadores e muita adrenalina para os pequenos exploradores.</p>
+                        <a href="#" class="text-accent font-semibold flex items-center">
+                            Saiba mais
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Attraction 2 -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546428318-13c55178a9a2?w=800" alt="Camarim Divertido" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-bold text-primary mb-3">Camarim Mágico</h3>
+                        <p class="text-gray-600 mb-4">Fantasias, maquiagens e acessórios para soltar a imaginação e virar um personagem.</p>
+                        <a href="#" class="text-accent font-semibold flex items-center">
+                            Saiba mais
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Attraction 3 -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800" alt="Área Baby" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-bold text-primary mb-3">Área Baby Segura</h3>
+                        <p class="text-gray-600 mb-4">Um cantinho especial e acolhedor para os nossos exploradores mais novos.</p>
+                        <a href="#" class="text-accent font-semibold flex items-center">
+                            Saiba mais
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-16">O que os pais <span class="text-secondary">dizem</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white text-dark p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Ana Paula S.</h4>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"A festa do meu filho foi um sonho! A equipe é incrível e cuidou de tudo. Recomendo de olhos fechados!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white text-dark p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Marcos R.</h4>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Lugar maravilhoso! Meu filho não queria ir embora. Segurança e diversão em um só lugar."</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-white font-bold">
+                    Veja mais depoimentos
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-6">Pronto para uma <span class="text-primary">aventura inesquecível</span>?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Agende agora a festa dos sonhos do seu filho e garanta momentos mágicos no Planeta Imaginário!</p>
+            <a href="#contato" class="bg-primary hover:bg-white text-white hover:text-primary font-bold py-4 px-10 rounded-full transition-all inline-block">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-black text-center mb-4">Agende Sua <span class="text-primary">Visita ou Festa</span>!</h2>
+                <p class="text-xl text-center text-gray-600 mb-10">Entre em contato conosco e vamos tornar a festa do seu filho inesquecível</p>
+                
+                <form class="bg-light p-8 rounded-2xl shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" placeholder="Seu nome" class="py-3 px-6 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="email" placeholder="Seu melhor e-mail" class="py-3 px-6 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="tel" placeholder="Seu WhatsApp" class="py-3 px-6 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="text" placeholder="Assunto" class="py-3 px-6 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <textarea placeholder="Conte-nos o que você precisa!" rows="4" class="w-full py-3 px-6 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary mb-6"></textarea>
+                    <button type="submit" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition-all w-full md:w-auto">Enviar Mensagem!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">PI</div>
+                        <span class="font-bold text-xl text-primary">Planeta Imaginário</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Onde a imaginação ganha vida e a diversão não tem limites!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">Rua da Imaginação, 123 - Jundiaí/SP</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">(11) 99999-8888</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">contato@planetaimaginariojundiai.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Hours -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Funcionamento</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Terça a Sexta: 13h - 19h</li>
+                        <li class="text-gray-400">Sábados e Domingos: 10h - 20h</li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscreva-se para receber nossas novidades e promoções!</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="py-2 px-4 rounded-l-full focus:outline-none text-dark w-full">
+                        <button type="submit" class="bg-primary hover:bg-secondary py-2 px-4 rounded-r-full transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Planeta Imaginário Jundiaí. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scroll');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('navbar-scroll');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple testimonial carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonials = document.querySelectorAll('.testimonial-card');
+            let current = 0;
+            
+            if (testimonials.length > 0) {
+                setInterval(() => {
+                    testimonials[current].classList.remove('animate-pulse-slow');
+                    current = (current + 1) % testimonials.length;
+                    testimonials[current].classList.add('animate-pulse-slow');
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
