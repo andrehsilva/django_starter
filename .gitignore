@@ -6,5 +6,23 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
-.venv
+# Arquivos do Python
+__pycache__/
+*.pyc
+
+# Arquivos de ambiente e segredos
+.env
+*.env
+
+# Banco de dados
+*.sqlite3
+db.sqlite3
+
+# Pasta do ambiente virtual
+.venv/
+venv/
+env/
+
+# Arquivos de IDEs
+.idea/
+.vscode/
